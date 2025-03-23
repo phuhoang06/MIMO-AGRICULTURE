@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Nông Nghiệp</title>
+  <!-- Liên kết Bootstrap CSS từ CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Liên kết file CSS tùy chỉnh -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="header"></div>
+<!-- 1. Banner giới thiệu doanh nghiệp -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Cột bên trái: Banner (Carousel) -->
+    <div class="col-md-8">
+      <!-- BANNER CAROUSEL -->
+      <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- Các chỉ báo (dots) nếu muốn -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="assets/banner1.jpg" class="d-block w-100" alt="Banner 1">
+            <!-- Nội dung chèn đè (nếu cần) -->
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tiêu đề Banner 1</h5>
+              <p>Mô tả ngắn cho banner 1</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="assets/banner2.jpg" class="d-block w-100" alt="Banner 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tiêu đề Banner 2</h5>
+              <p>Mô tả ngắn cho banner 2</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img src="assets/banner3.jpg" class="d-block w-100" alt="Banner 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tiêu đề Banner 3</h5>
+              <p>Mô tả ngắn cho banner 3</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nút chuyển slide Trước / Sau -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Trước</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Sau</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cột bên phải: Tin tức nổi bật -->
+    <div class="col-md-4">
+      <h5 class="mb-3">Tin nổi bật</h5>
+
+      <!-- Mẫu tin tức 1 -->
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="assets/news1.jpg" class="img-fluid rounded-start" alt="Tin tức 1">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h6 class="card-title">Tiêu đề tin tức 1</h6>
+              <p class="card-text small">Mô tả ngắn về tin tức 1...</p>
+              <!-- Có thể thêm link chi tiết -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mẫu tin tức 2 -->
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="assets/news2.jpg" class="img-fluid rounded-start" alt="Tin tức 2">
+          </div>
+          <div class="col-8">
+            <div class="card-body">
+              <h6 class="card-title">Tiêu đề tin tức 2</h6>
+              <p class="card-text small">Mô tả ngắn về tin tức 2...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thêm các tin tức khác nếu muốn -->
+    </div>
+  </div>
+</div>
+
+<!-- 2. Sản phẩm theo phân loại -->
+<div class="container mt-5">
+  <!-- Danh mục Top bán chạy -->
+  <h2>Top bán chạy</h2>
+  <div id="topProductsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <!-- Sản phẩm 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/sp1.jpg" class="card-img-top" alt="Sản phẩm 1">
+              <div class="card-body">
+                <h5 class="card-title">Sản phẩm 1</h5>
+                <p class="card-text">Mô tả ngắn.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Sản phẩm 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/sp2.jpg" class="card-img-top" alt="Sản phẩm 2">
+              <div class="card-body">
+                <h5 class="card-title">Sản phẩm 2</h5>
+                <p class="card-text">Mô tả ngắn.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Sản phẩm 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/sp3.jpg" class="card-img-top" alt="Sản phẩm 3">
+              <div class="card-body">
+                <h5 class="card-title">Sản phẩm 3</h5>
+                <p class="card-text">Mô tả ngắn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bạn có thể thêm các carousel-item khác nếu có nhiều sản phẩm -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#topProductsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Trước</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#topProductsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sau</span>
+    </button>
+  </div>
+</div>
+
+<!-- Danh mục Rau ăn lá -->
+<div class="container mt-5">
+  <h2>Rau ăn lá</h2>
+  <div id="leafyProductsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <!-- Sản phẩm 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/rau1.jpg" class="card-img-top" alt="Rau 1">
+              <div class="card-body">
+                <h5 class="card-title">Rau 1</h5>
+                <p class="card-text">Mô tả ngắn.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Sản phẩm 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/rau2.jpg" class="card-img-top" alt="Rau 2">
+              <div class="card-body">
+                <h5 class="card-title">Rau 2</h5>
+                <p class="card-text">Mô tả ngắn.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Sản phẩm 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/rau3.jpg" class="card-img-top" alt="Rau 3">
+              <div class="card-body">
+                <h5 class="card-title">Rau 3</h5>
+                <p class="card-text">Mô tả ngắn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Thêm carousel-item nếu có thêm sản phẩm -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#leafyProductsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Trước</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#leafyProductsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sau</span>
+    </button>
+  </div>
+</div>
+
+<!-- 3. Tin tức mới -->
+<div class="container mt-5">
+  <h2>Tin tức mới</h2>
+  <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <!-- Tin tức 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/news1.jpg" class="card-img-top" alt="Tin tức 1">
+              <div class="card-body">
+                <h5 class="card-title">Tin tức 1</h5>
+                <p class="card-text">Mô tả ngắn về tin tức.</p>
+                <a href="#" class="btn btn-primary">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+          <!-- Tin tức 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/news2.jpg" class="card-img-top" alt="Tin tức 2">
+              <div class="card-body">
+                <h5 class="card-title">Tin tức 2</h5>
+                <p class="card-text">Mô tả ngắn về tin tức.</p>
+                <a href="#" class="btn btn-primary">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+          <!-- Tin tức 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="assets/news3.jpg" class="card-img-top" alt="Tin tức 3">
+              <div class="card-body">
+                <h5 class="card-title">Tin tức 3</h5>
+                <p class="card-text">Mô tả ngắn về tin tức.</p>
+                <a href="#" class="btn btn-primary">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Thêm carousel-item nếu có tin tức khác -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Trước</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sau</span>
+    </button>
+  </div>
+</div>
+
+<!-- 4. Video (nhúng từ YouTube) -->
+<div class="container mt-5 mb-5">
+  <h2>Video</h2>
+  <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID1" title="YouTube video" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID2" title="YouTube video" allowfullscreen></iframe>
+        </div>
+      </div>
+      <!-- Thêm carousel-item nếu cần -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Trước</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Sau</span>
+    </button>
+  </div>
+</div>
+
+<div id="footer"></div>
+<!-- Liên kết Bootstrap JS bundle (bao gồm Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- File JS tùy chỉnh (nếu cần) -->
+<script src="js/scripts.js"></script>
+</body>
+</html>
