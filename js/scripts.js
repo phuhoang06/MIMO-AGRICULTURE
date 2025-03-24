@@ -10,3 +10,16 @@ fetch('includes/footer.html')
     .then(data=>{
         document.querySelector('body').insertAdjacentHTML('beforeend',data);
     })
+
+// Load chat widget
+fetch('includes/chat-widget.html')
+    .then(res => res.text())
+    .then(html => {
+        document.body.insertAdjacentHTML('beforeend', html);
+    });
+
+document.addEventListener('click', function(e) {
+    if (e.target.closest('#chat-btn')) {
+        alert("Mở khung chat ở đây nhé!");
+    }
+});

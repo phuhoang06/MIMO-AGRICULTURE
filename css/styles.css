@@ -12,3 +12,16 @@ h5.mb-3 {
     font-size: 0.95rem;
     font-weight: 600;
 }
+.navbar-foodmap {
+    background-color: #0caa37; /* hoặc màu xanh lá tuỳ ý */
+}
+
+.cs-footer {
+    background-color: #0A923C;
+    height: 55px;
+    line-height: 55px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
