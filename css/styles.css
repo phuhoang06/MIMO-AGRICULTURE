@@ -1,27 +1,419 @@
-/* styles.css */
-h5.mb-3 {
+/*************************************************************
+ * 1. Định nghĩa biến màu (CSS Variables)
+ *    Bạn chỉ cần thay đổi ở đây để đổi màu toàn bộ
+ *************************************************************/
+:root {
+    --brand-green: #0A923C;       /* Màu xanh chủ đạo */
+    --brand-green-dark: #087a2f;  /* Xanh đậm hơn (hover) */
+    --text-dark: #333;            /* Màu chữ chính */
+    --bg-light: #f5f5f5;          /* Màu nền chính */
+    --white: #ffffff;
+    --icon-color: #333;           /* Màu icon default */
+    --highlight-red: #d50000;     /* Màu đỏ hotline (nếu muốn) */
+}
+
+/*************************************************************
+ * 2. Thiết lập mặc định cho toàn trang
+ *************************************************************/
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;               /* Giảm xuống 16px để gọn */
+    line-height: 1.5;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2rem; } /* ~32px (gọn hơn so với 2.5rem) */
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+
+/*************************************************************
+ * 3. Top Bar (Địa chỉ + Email + MXH)
+ *************************************************************/
+.top-bar {
+    background-color: var(--white);
+    padding: 5px 0;               /* Giảm padding */
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;              /* Chữ nhỏ hơn */
+}
+
+.top-bar .icon-color {
+    color: var(--icon-color);
+}
+
+.top-bar a i {
+    color: var(--icon-color);
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--icon-color);
+}
+
+/*************************************************************
+ * 4. Header Bar (Logo | Search | Hotline)
+ *************************************************************/
+.header-bar {
+    background-color: var(--white);
+    padding: 8px 0; /* Giảm padding */
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-wrap {
+    min-width: 160px; /* Thu nhỏ */
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--brand-green);
+    border-radius: 50%;
+}
+
+.search-bar {
+    max-width: 500px; /* Giảm độ rộng nếu muốn */
+}
+
+.search-input {
+    border: 1px solid var(--brand-green);
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    font-size: 14px;
+}
+
+.btn-search {
+    border: 1px solid var(--brand-green);
+    border-radius: 0 20px 20px 0;
+    background-color: var(--white);
+    color: var(--brand-green);
+}
+
+.btn-search:hover {
+    background-color: var(--brand-green);
+    color: var(--white);
+}
+
+.hotline-wrap {
+    min-width: 160px;
+    font-size: 14px;
+}
+
+.hotline-label {
+    color: var(--brand-green);
     font-weight: 600;
+}
+
+.hotline-number {
+    font-weight: bold;
+    color: var(--highlight-red);
+    font-size: 16px;
+}
+
+.icon-color {
+    color: var(--brand-green);
+}
+
+/*************************************************************
+ * 5. Menu Bar (Navbar)
+ *************************************************************/
+.menu-bar {
+    background-color: var(--brand-green);
+    padding: 5px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--white) !important;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: var(--brand-green-dark) !important;
+    color: var(--white) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--white);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' "
+    + "xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' "
+    + "stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' "
+    + "d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Dropdown */
+.navbar-dark .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/*************************************************************
+ * 6. Footer
+ *************************************************************/
+.footer {
+    background-color: var(--brand-green);
+    padding: 10px 0;
+}
+
+.footer p {
+    color: var(--white);
+    margin: 0;
+    font-size: 14px;
+}
+
+/*************************************************************
+ * 7. Card / Khác (tuỳ chọn)
+ *************************************************************/
+.card {
+    background-color: #fff;
+    border: none;
 }
 
 .card.mb-3 {
     background-color: #f9f9f9;
+}
+#bannerCarousel img {
+    /* object-fit: cover; Đảm bảo hình ảnh lấp đầy khung mà không bị méo */
+    height: 17rem; /* Chiều cao cố định cho banner */
+    width: 100%; /* Chiều rộng luôn chiếm toàn bộ khung */
+  }
+  
+  @media (max-width: 768px) {
+    #bannerCarousel img {
+      height: 250px; /* Giảm chiều cao trên thiết bị nhỏ */
+    }
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black; /* Đặt màu nền đen */
+    border-radius: 50%; /* Làm tròn nút */
+    opacity: 0.2; /* Màu đen mờ hơn khi không di chuột */
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    opacity: 0.4; /* Màu đen đậm hơn khi di chuột */
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: black; /* Màu nền đen */
+    border: none; /* Bỏ viền */
+    width: 12px; /* Đường kính nút */
+    height: 12px;
+    border-radius: 50%; /* Làm tròn */
+  }
+
+/* Đặt kích thước cố định cho hình ảnh trong phần tin tức */
+.card img {
+  width: 100%; /* Chiều rộng chiếm toàn bộ khung */
+  height: 100px; /* Chiều cao cố định */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+}
+
+/* Hiệu ứng nổi lên khi di chuột vào hình ảnh */
+.card img:hover {
+  transform: scale(1.05); /* Phóng to nhẹ hình ảnh */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+}
+
+/* Định dạng hình ảnh sản phẩm */
+.product-card img {
+  width: 100%; /* Chiều rộng chiếm toàn bộ khung */
+  height: 200px; /* Chiều cao cố định */
+  object-fit: contain; /* Hiển thị toàn bộ hình ảnh mà không bị cắt */
+  background-color: #f8f8f8; /* Tùy chọn: thêm nền để hình ảnh nổi bật hơn */
+  border: 1px solid #ddd; /* Tùy chọn: thêm viền nhẹ */
+  padding: 5px; /* Tùy chọn: thêm khoảng cách giữa hình và viền */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+}
+
+/* Hiệu ứng nổi lên khi di chuột vào hình ảnh sản phẩm */
+.product-card img:hover {
+  transform: scale(1.05); /* Phóng to nhẹ hình ảnh */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+}
+
+/* Đảm bảo hình ảnh sản phẩm trong block lấp đầy không gian */
+#topProductsCarousel .product-card img {
+  width: 100%; /* Chiều rộng chiếm toàn bộ khung */
+  height: 100%; /* Chiều cao chiếm toàn bộ khung */
+  object-fit: cover; /* Đảm bảo hình ảnh lấp đầy khung mà không bị méo */
+  border-radius: 0; /* Loại bỏ bo tròn nếu có */
+  margin: 0; /* Loại bỏ khoảng cách xung quanh */
+  padding: 0; /* Loại bỏ padding */
+}
+
+/* Căn giữa nội dung trong card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Đẩy nội dung lên và xuống */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 12px; /* Thêm khoảng cách bên trong */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa nội dung */
+    text-align: center; /* Căn giữa văn bản */
+    padding: 0;
+}
+
+.product-card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.product-card .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa sao */
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.product-card .price {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa giá */
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.product-card .btn {
+    width: 100%;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+.row.g-2 {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.row.g-2 > [class*='col-'] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+/* Tiktok button */
+#tiktok-btn {
+    background-color: #000; /* Nền đen */
+    color: #fff; /* Chữ trắng */
     border: none;
 }
 
-.card-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-.navbar-foodmap {
-    background-color: #0caa37; /* hoặc màu xanh lá tuỳ ý */
+#tiktok-btn:hover {
+    background-color: #333; /* Màu đen nhạt hơn khi hover */
 }
 
-.cs-footer {
-    background-color: #0A923C;
-    height: 55px;
-    line-height: 55px;
+/* Facebook button */
+#facebook-btn {
+    background-color: #1877f2; /* Nền xanh Facebook */
+    color: #fff; /* Chữ trắng */
+    border: none;
 }
-img {
-    max-width: 100%;
-    height: auto;
+
+#facebook-btn:hover {
+    background-color: #145dbf; /* Màu xanh đậm hơn khi hover */
+}
+
+/* Zalo button */
+#chat-btn {
+    background-color: #fff; /* Nền trắng */
+    color: #0078ff; /* Chữ xanh */
+    border: 1px solid #0078ff; /* Viền xanh */
+}
+
+#chat-btn:hover {
+    background-color: #f0f8ff; /* Nền xanh nhạt khi hover */
+    color: #0056b3; /* Chữ xanh đậm hơn */
+}
+
+/* Hotline button */
+#hotline-btn {
+    background-color: #dc3545; /* Nền đỏ */
+    color: #fff; /* Chữ trắng */
+    border: none;
+}
+
+#hotline-btn:hover {
+    background-color: #b02a37; /* Màu đỏ đậm hơn khi hover */
+}
+
+/* Bao bọc danh mục */
+.category-container {
+    border: 1px solid #e0e0e0; /* Viền xám nhạt */
+    border-radius: 12px; /* Bo góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ */
+    background-color: #fff; /* Nền trắng */
+    padding: 16px; /* Khoảng cách bên trong */
+    margin-bottom: 24px; /* Khoảng cách giữa các danh mục */
+}
+
+/* Tiêu đề danh mục */
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+/* Card sản phẩm */
+.product-card {
+    border: 1px solid #f0f0f0; /* Viền xám nhạt */
+    border-radius: 8px; /* Bo góc nhẹ */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nhô lên khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Bóng đổ đậm hơn */
 }

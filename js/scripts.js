@@ -20,6 +20,6 @@ fetch('includes/chat-widget.html')
 
 document.addEventListener('click', function(e) {
     if (e.target.closest('#chat-btn')) {
-        alert("Mở khung chat ở đây nhé!");
+    
     }
 });
