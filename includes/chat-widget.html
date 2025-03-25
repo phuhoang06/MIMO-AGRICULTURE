@@ -1,47 +1,62 @@
 <!-- includes/chat-widget.html -->
-<div id="chat-widget" style="position: fixed; bottom: 25px; right: 25px; z-index: 9999;">
+<div id="chat-widget" style="position: fixed; bottom: 15px; right: 15px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end;">
 
-  <div style="position: relative;">
-    <button id="tiktok-btn" class="btn btn-primary rounded-pill px-3 py-2 d-flex align-items-center shadow">
-      <a class="navbar-brand" href="https://www.tiktok.com/@mimo.agriculture">
-        <img src="assets/icon/tiktok.png" alt="Logo"
-             class="rounded-circle"
-             style="display: inline; height: 25px; width: 25px; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.3);">
-        tiktok
+  <div style="position: relative; margin-bottom: 8px;">
+    <button id="tiktok-btn" class="btn btn-dark rounded-pill px-3 py-2 d-flex align-items-center shadow" style="font-size: 12px;">
+      <a href="https://www.tiktok.com/@mimo.agriculture" target="_blank" rel="noopener" style="text-decoration: none; display: flex; align-items: center; color: white;">
+        <img src="assets/icon/tiktok.png" alt="TikTok" 
+             class="rounded-circle me-1"
+             style="height: 25px; width: 25px; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.3);">
+        <span class="d-none d-sm-inline">TikTok</span>
       </a>
     </button>
   </div>
-  <div style="position: relative;">
-    <button id="facebook-btn" class="btn btn-primary rounded-pill px-3 py-2 d-flex align-items-center shadow">
-      <a class="navbar-brand" href="https://www.facebook.com/www.mimo.agri">
-        <img src="assets/icon/facebook.png" alt="Logo"
-             class="rounded-circle"
-             style="display: inline; height: 25px; width: 25px; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.3);">
-        facebook
+  
+  <div style="position: relative; margin-bottom: 8px;">
+    <button id="facebook-btn" class="btn rounded-pill px-3 py-2 d-flex align-items-center shadow" style="background-color: #1877f2; color: white; font-size: 12px;">
+      <a href="https://www.facebook.com/www.mimo.agri" target="_blank" rel="noopener" style="text-decoration: none; display: flex; align-items: center; color: white;">
+        <img src="assets/icon/facebook.png" alt="Facebook" 
+             class="rounded-circle me-1"
+             style="height: 25px; width: 25px; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.3);">
+        <span class="d-none d-sm-inline">Facebook</span>
       </a>
     </button>
   </div>
-  <div style="position: relative;">
-    <button id="chat-btn" class="btn btn-primary rounded-pill px-3 py-2 d-flex align-items-center shadow">
-      <a class="navbar-brand" href="https://zalo.me/0853991995">
-        <img src="assets/icon/zalo.png" alt="Logo"
-             class="rounded-circle"
-             style="display: inline ; height: 25px; width: 25px; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.3);">
-        Chat Zalo
-      </a>
-    </button>
-  </div>
-
-  <div style="position: relative;">
-    <button id="hotline-btn" class="btn btn-primary rounded-pill px-3 py-2 d-flex align-items-center shadow">
-      <a class="navbar-brand" href="tel:+8485 399 1995">
-        <img src="assets/icon/support-icon.png" alt="Logo"
-             class="rounded-circle"
-             style="display: inline; height: 25px; width: 25px; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.3);">
-        085 399 1995
+  
+  <div style="position: relative; margin-bottom: 8px;">
+    <button id="chat-btn" class="btn rounded-pill px-3 py-2 d-flex align-items-center shadow" style="background-color: white; color: #0078ff; border: 1px solid #0078ff; font-size: 12px;">
+      <a href="https://zalo.me/0853991995" target="_blank" rel="noopener" style="text-decoration: none; display: flex; align-items: center; color: #0078ff;">
+        <img src="assets/icon/zalo.png" alt="Zalo" 
+             class="rounded-circle me-1"
+             style="height: 25px; width: 25px; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.3);">
+        <span class="d-none d-sm-inline">Chat Zalo</span>
       </a>
     </button>
   </div>
 
-
+  <div style="position: relative; margin-bottom: 8px;">
+    <button id="hotline-btn" class="btn rounded-pill px-3 py-2 d-flex align-items-center shadow" style="background-color: #dc3545; color: white; font-size: 12px;">
+      <a href="tel:+8485 399 1995" style="text-decoration: none; display: flex; align-items: center; color: white;">
+        <img src="assets/icon/support-icon.png" alt="Hotline" 
+             class="rounded-circle me-1"
+             style="height: 25px; width: 25px; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0,0,0,0.3);">
+        <span class="d-none d-sm-inline">085 399 1995</span>
+      </a>
+    </button>
+  </div>
 </div>
+
+<!-- Media query for mobile -->
+<style>
+  @media (max-width: 576px) {
+    #chat-widget {
+      bottom: 10px;
+      right: 10px;
+    }
+    
+    #chat-widget button {
+      transform: scale(0.85);
+      transform-origin: right bottom;
+    }
+  }
+</style>

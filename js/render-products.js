@@ -24,7 +24,8 @@ function renderProducts(products, containerId) {
             </div>
             <button class="btn btn-outline-success btn-sm mt-2 add-to-cart" 
               data-name="${product.title}" 
-              data-price="${product.price}">
+              data-price="${product.price}"
+              data-img="${product.img}">
               <i class="fa fa-cart-plus"></i> Thêm vào giỏ
             </button>
           </div>
@@ -40,28 +41,20 @@ function renderProducts(products, containerId) {
 function attachAddToCartEvents() {
   const buttons = document.querySelectorAll('.add-to-cart');
   buttons.forEach(button => {
+    // Xóa sự kiện cũ trước khi gắn sự kiện mới
+    button.replaceWith(button.cloneNode(true));
+  });
+
+  // Gắn sự kiện mới
+  document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', () => {
-      const product = {
-        name: button.getAttribute('data-name'),
-        price: parseInt(button.getAttribute('data-price'), 10),
-      };
-      addToCart(product);
-      alert(`Đã thêm "${product.name}" vào giỏ hàng!`);
+      const title = button.getAttribute('data-name');
+      const price = parseInt(button.getAttribute('data-price'), 10);
+      const img = button.getAttribute('data-img');
+      cartManager.addToCart(title, price, img);
+      
     });
   });
-}
-
-// Hàm thêm sản phẩm vào giỏ hàng
-function addToCart(product) {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart.push(product);
-  localStorage.setItem('cart', JSON.stringify(cart));
-
-  // Cập nhật số lượng sản phẩm trong giỏ hàng
-  const cartCount = document.getElementById('cartCount');
-  if (cartCount) {
-    cartCount.textContent = cart.length;
-  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

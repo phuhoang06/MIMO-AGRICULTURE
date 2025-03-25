@@ -2,8 +2,11 @@
 fetch('includes/header.html')
     .then(response => response.text())
     .then(data => {
-        document.querySelector('body').insertAdjacentHTML('afterbegin', data);
+        document.getElementById('header').innerHTML = data;
+        // Sau khi header đã được chèn, khởi tạo cartManager:
+        cartManager = new CartManager();
     });
+
 
 fetch('includes/footer.html')
     .then(response => response.text())

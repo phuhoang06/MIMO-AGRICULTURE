@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Nông Nghiệp</title>
+  <!-- Liên kết Bootstrap CSS từ CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Liên kết file CSS tùy chỉnh -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Link Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Đặt hàng</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Form đặt hàng -->
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0"><i class="fas fa-user me-2"></i>Thông tin khách hàng</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="customerForm">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="phone" pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b" required>
+                                <div class="form-text">Định dạng: 09xxxxxxxx hoặc 03xxxxxxxx</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="city" class="form-label">Tỉnh/Thành phố</label>
+                                <select class="form-select" id="city" required>
+                                    <option value="">Chọn Tỉnh/Thành phố</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="district" class="form-label">Quận/Huyện</label>
+                                <select class="form-select" id="district" required>
+                                    <option value="">Chọn Quận/Huyện</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ward" class="form-label">Xã/Phường</label>
+                                <select class="form-select" id="ward" required>
+                                    <option value="">Chọn Xã/Phường</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Địa chỉ chi tiết</label>
+                                <input type="text" class="form-control" id="address" required>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Giỏ hàng -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0"><i class="fas fa-shopping-cart me-2"></i>Giỏ hàng</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="orderItems"></div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0">Tổng tiền:</h5>
+                            <h5 class="text-success mb-0" id="totalAmount">0₫</h5>
+                        </div>
+                        <button class="btn btn-success w-100" id="confirmOrder">
+                            <i class="fas fa-check me-2"></i>Xác nhận đặt hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/order.js"></script>
+</body>
+</html>
+
+
+

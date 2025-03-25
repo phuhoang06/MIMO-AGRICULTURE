@@ -1,52 +1,62 @@
-
 <!-- HEADER: Logo | Search | Hotline -->
 <div class="header-bar">
     <!-- TOP BAR: Địa chỉ + Email + MXH -->
-<div class="top-bar">
-    <div class="container d-flex justify-content-between align-items-center flex-wrap">
-        <div class="d-flex align-items-center flex-wrap">
-      <span class="me-3">
-        <i class="fas fa-map-marker-alt icon-color"></i>
-        Số 11, 275 Chiến Thắng, Văn Quán, Hà Đông, Hà Nội, Việt Nam
-      </span>
-            <span>
-        <i class="fas fa-envelope icon-color"></i>
-        abc@gmail.com
-      </span>
-        </div>
-        <div class="social-icons mt-1">
-            <a href="https://www.facebook.com/www.mimo.agri"><i class="fab fa-facebook mx-1"></i></a>
-            <a href="https://www.tiktok.com/@mimo.agriculture"><i class="fab fa-tiktok mx-1"></i></a>
-            <a href="#"><i class="fab fa-pinterest mx-1"></i></a>
-            <a href="https://www.youtube.com/@MiMoAgriculture"><i class="fab fa-youtube mx-1"></i></a>
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div class="d-flex align-items-center flex-wrap">
+                <span class="me-2 mb-1">
+                    <i class="fas fa-map-marker-alt icon-color"></i>
+                    <span class="d-none d-md-inline">Số 11, 275 Chiến Thắng, Văn Quán, Hà Đông, Hà Nội, Việt Nam</span>
+                    <span class="d-inline d-md-none">Hà Đông, Hà Nội</span>
+                </span>
+                <span class="mb-1">
+                    <i class="fas fa-envelope icon-color"></i>
+                    abc@gmail.com
+                </span>
+            </div>
+            <div class="social-icons mt-1">
+                <a href="https://www.facebook.com/www.mimo.agri" target="_blank" rel="noopener"><i class="fab fa-facebook mx-1"></i></a>
+                <a href="https://www.tiktok.com/@mimo.agriculture" target="_blank" rel="noopener"><i class="fab fa-tiktok mx-1"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-pinterest mx-1"></i></a>
+                <a href="https://www.youtube.com/@MiMoAgriculture" target="_blank" rel="noopener"><i class="fab fa-youtube mx-1"></i></a>
+            </div>
         </div>
     </div>
-</div>
-    <div class="container d-flex align-items-center justify-content-between flex-wrap">
-
-        <!-- Logo -->
-        <div class="d-flex align-items-center logo-wrap" >
-            <img src="assets/icon/logo.png" alt="Logo" class="logo-img me-2">
-            <span class="fw-bold text-success fs-5 mb-0">Mimo Agri</span>
-        </div>
-
-        <!-- Search Bar -->
-        <form class="input-group search-bar mx-3 flex-grow-1" style="max-width: 600px;">
-            <input type="text" class="form-control search-input" placeholder="Nhập thông tin tìm kiếm...">
-            <button class="btn btn-search" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-
-        <!-- Hotline -->
-        <div class="hotline-wrap text-end">
-            <div>
-                <i class="fas fa-phone-alt icon-color"></i>
-                <span class="hotline-label">Hotline</span>
+    <div class="container">
+        <div class="row align-items-center py-2">
+            <!-- Logo -->
+            <div class="col-6 col-md-3 col-lg-2 mb-2 mb-md-0">
+                <div class="logo-wrap">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <img src="assets/icon/logo.png" alt="Logo" class="logo-img me-2">
+                        <span class="fw-bold text-success fs-5 mb-0">Mimo Agri</span>
+                    </a>
+                </div>
             </div>
-            <span class="hotline-number">085 399 1995</span>
-        </div>
 
+            <!-- Search Bar -->
+            <div class="col-12 col-md-6 col-lg-7 order-3 order-md-2 mb-2 mb-md-0">
+                <form class="input-group search-bar mx-md-3">
+                    <input type="text" class="form-control search-input" placeholder="Nhập thông tin tìm kiếm...">
+                    <button class="btn btn-search" type="submit" title="Tìm kiếm">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Hotline & Cart -->
+            <div class="col-6 col-md-3 col-lg-3 text-end order-2 order-md-3 mb-2 mb-md-0">
+                <div class="d-flex align-items-center justify-content-end">
+                    <div class="hotline-wrap text-end me-4">
+                        <div>
+                            <i class="fas fa-phone-alt icon-color"></i>
+                            <span class="hotline-label">Hotline</span>
+                        </div>
+                        <span class="hotline-number">085 399 1995</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -54,60 +64,63 @@
 <div class="menu-bar">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <div class="container-fluid justify-content-center">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
                         aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse show" id="navbarMenu">
-                    <ul class="navbar-nav text-uppercase fw-bold">
-                        <li class="nav-item"><a class="nav-link active" href="../index.html">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html#gioi-thieu">Giới thiệu</a></li>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav text-uppercase fw-bold mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#gioi-thieu">Giới thiệu</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                 Sản phẩm
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../index.html#top-selling">Top bán chạy</a></li>
-                                <li><a class="dropdown-item" href="../index.html#rau-an-la">Rau ăn lá</a></li>
+                                <li><a class="dropdown-item" href="index.html#top-selling">Top bán chạy</a></li>
+                                <li><a class="dropdown-item" href="index.html#rau-an-la">Rau ăn lá</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#">Hình ảnh bàn giao</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html#tintuc">Tin tức</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html#video">Video</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#tintuc">Tin tức</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#video">Video</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Tuyển dụng</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
                     </ul>
                 </div>
+                <div class="ms-auto d-flex">
+                    <button id="cartButton" class="btn btn-outline-light position-relative ms-2">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+                    </button>
+                </div>
             </div>
         </nav>
     </div>
-        
-      <!-- ...existing code... -->
-     <!-- Nút giỏ hàng -->
-<button id="cartButton" class="btn btn-primary">
-    Giỏ hàng (<span id="cartCount">0</span>)
-  </button>
+</div>
 
-    
-    <!-- Modal hiển thị giỏ hàng -->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+<!-- Modal giỏ hàng -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cartModalLabel">Giỏ hàng</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul id="cartItems" class="list-group">
-              <!-- Sản phẩm trong giỏ hàng sẽ được render tại đây -->
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            <button id="clearCart" type="button" class="btn btn-danger">Xóa giỏ hàng</button>
-          </div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">
+                    <i class="fas fa-shopping-cart me-2"></i>Giỏ hàng
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" id="cartItems"></ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="clearCart">
+                    <i class="fas fa-trash me-2"></i>Xóa giỏ hàng
+                </button>
+                <a href="order.html" class="btn btn-success">
+                    <i class="fas fa-check me-2"></i>Tiến hành đặt hàng
+                </a>
+            </div>
         </div>
-      </div>
     </div>
 </div>
